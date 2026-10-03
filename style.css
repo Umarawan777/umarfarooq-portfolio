@@ -1,0 +1,386 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: #111827;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Home */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 10%;
+
+    background-color: #e0f2fe;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+#home h1 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+#home h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#home a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background-color: #0284c7;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
+#home a:hover {
+    background-color: #0369a1;
+}
+
+
+/* Common Section */
+
+section {
+    padding: 80px 10%;
+}
+
+section > h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+
+/* Skills */
+
+#skills {
+    background-color: white;
+}
+
+#skills div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills p {
+    background-color: #111827;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+}
+
+
+/* Projects */
+
+#projects {
+    background-color: #e5e7eb;
+}
+
+#projects div {
+    background-color: white;
+
+    padding: 25px;
+
+    max-width: 500px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#projects h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Contact */
+
+#contact {
+    background-color: white;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #111827;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    #menuButton{
+        display: block;
+    }
+    ...
+}
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    #menuButton {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 15px;
+
+        padding-top: 15px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #home {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 5%;
+    }
+
+    #home img {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 22px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+}
+#home img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 60px;
+    background-colour: white;
+}
+/* Project Cards */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+/* Dark Mode */
+
+body.dark-mode {
+    background-color: #111827;
+    color: white;
+}
+
+body.dark-mode section {
+    background-color: #1f2937;
+}
+
+body.dark-mode #home {
+    background-color: #111827;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card {
+    background-color: #374151;
+    color: white;
+}
+/* Dark Mode - Projects and Contact */
+
+body.dark-mode #projects {
+    background-color: #111827;
+}
+
+body.dark-mode #contact {
+    background-color: #1f2937;
+}
+
+body.dark-mode #projects h2,
+body.dark-mode #contact h2 {
+    color: white;
+}
+
+body.dark-mode .project-card {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark-mode .project-card h3 {
+    color: white;
+}
+
+body.dark-mode .project-card p {
+    color: #e5e7eb;
+}
+
+body.dark-mode #contact p {
+    color: #e5e7eb;
+}
+body.dark-mode #projects {
+    background-color: #1f2937;
+    color: white;
+    min-height: 300px;
+}
+
+body.dark-mode #projects h2 {
+    color: white;
+}
+
+body.dark-mode #projects .project-card {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark-mode #projects .project-card h3 {
+    color: white;
+}
+
+body.dark-mode #projects .project-card p {
+    color: white;
+}
+/* Mobile Menu Button */
+
+#menuButton {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+/* Mobile Menu Fix */
+
+#menuButton {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #menuButton {
+        display: block !important;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
